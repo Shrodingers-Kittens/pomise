@@ -42,7 +42,7 @@ const PoemPage = () => {
     <div className="min-h-screen parchment-bg flex items-center justify-center px-6 py-12 relative overflow-hidden">
       {/* Background audio */}
       <audio autoPlay loop className="hidden">
-        <source src="https://od.lk/s/NzhfNzM4OTY1Mzhf/Elliot%20James%20Reay%20-%20I%20Think%20They%20Call%20This%20Love%20%28Instrumental%29.mp3" type="audio/wav" />
+        <source src="https://od.lk/s/NzhfNzM4OTY1Mzhf/Elliot%20James%20Reay%20-%20I%20Think%20They%20Call%20This%20Love%20%28Instrumental%29.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Sparkle effects */}
