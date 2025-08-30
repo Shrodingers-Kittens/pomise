@@ -92,6 +92,9 @@ const PoemPage = () => {
                 </svg>
               </div>
               <p className="text-lg text-gray-600 italic">
+                Thank you for coming into my life.,
+                Thank you for loving me unconditionally.,
+                Thank you for being the rainbow in my life.
                 Forever yours ❤️
               </p>
             </div>
