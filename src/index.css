@@ -1,96 +1,70 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Romantic Design System - All colors, gradients, fonts, etc defined here */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 20 20% 98%;
+    --foreground: 340 15% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 350 50% 98%;
+    --card-foreground: 340 15% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 350 50% 98%;
+    --popover-foreground: 340 15% 25%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 330 70% 60%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 320 30% 92%;
+    --secondary-foreground: 340 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 320 25% 94%;
+    --muted-foreground: 340 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 330 60% 88%;
+    --accent-foreground: 340 15% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 320 20% 88%;
+    --input: 320 20% 88%;
+    --ring: 330 70% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Romantic color palette */
+    --sakura-pink: 330 70% 85%;
+    --rose-gold: 15 50% 75%;
+    --cream: 45 30% 95%;
+    --soft-pink: 330 40% 92%;
+    --romantic-purple: 280 30% 70%;
+    --parchment: 40 25% 90%;
+    --sparkle-gold: 45 80% 70%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 340 20% 8%;
+    --foreground: 330 20% 92%;
+    --card: 340 20% 10%;
+    --card-foreground: 330 20% 92%;
+    --popover: 340 20% 10%;
+    --popover-foreground: 330 20% 92%;
+    --primary: 330 70% 70%;
+    --primary-foreground: 340 20% 8%;
+    --secondary: 340 15% 15%;
+    --secondary-foreground: 330 20% 92%;
+    --muted: 340 15% 15%;
+    --muted-foreground: 330 10% 65%;
+    --accent: 340 15% 15%;
+    --accent-foreground: 330 20% 92%;
+    --border: 340 15% 15%;
+    --input: 340 15% 15%;
+    --ring: 330 70% 70%;
   }
 }
 
@@ -100,6 +74,171 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+}
+
+/* Custom romantic animations */
+@keyframes sakuraFall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px hsl(var(--primary)));
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px hsl(var(--primary)));
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* Utility classes */
+.sakura-fall {
+  animation: sakuraFall linear infinite;
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid hsl(var(--primary));
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typewriter 4s steps(80) 1s forwards, 
+             blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: hsl(var(--primary));
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.grow {
+  animation: grow 0.3s ease-out forwards;
+}
+
+/* Custom gradient backgrounds */
+.romantic-gradient {
+  background: linear-gradient(135deg, 
+    hsl(var(--sakura-pink)) 0%, 
+    hsl(var(--soft-pink)) 50%, 
+    hsl(var(--cream)) 100%);
+}
+
+.parchment-bg {
+  background: linear-gradient(45deg, 
+    hsl(var(--parchment)) 0%, 
+    hsl(var(--cream)) 50%, 
+    hsl(var(--parchment)) 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Romantic button variants */
+.btn-romantic {
+  @apply bg-gradient-to-r from-pink-400 to-rose-500 text-white px-8 py-3 rounded-full 
+         font-medium shadow-lg hover:shadow-xl transform hover:scale-105 
+         transition-all duration-300 heartbeat;
+}
+
+.btn-yes {
+  @apply bg-gradient-to-r from-pink-500 to-rose-600 text-white px-6 py-3 rounded-full 
+         font-medium shadow-lg hover:shadow-xl transform hover:scale-110 
+         transition-all duration-300 glow-pink;
+}
+
+.btn-no {
+  @apply bg-gray-200 text-gray-600 px-6 py-3 rounded-full 
+         font-medium hover:bg-gray-300 transition-all duration-300;
+}
+
+.glow-pink {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+/* Typography variants */
+.serif-romantic {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.8;
+  color: hsl(var(--foreground));
+}
+
+.poem-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  line-height: 2;
+  color: hsl(340 15% 30%);
+  text-align: center;
 }
